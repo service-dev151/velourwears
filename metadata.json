@@ -1,0 +1,6 @@
+{
+  "name": "Velour Wears - Luxury Pakistani Kurtis",
+  "description": "Discover beautifully crafted Pakistani Kurtis by Velour Wears. Explore stitched, unstitched, and girls' Kurti collections in premium lawn, cotton, linen, and khaddar fabrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

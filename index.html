@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velour Wears - Luxury Pakistani Kurtis</title>
+  <meta name="description" content="Discover beautifully crafted Pakistani Kurtis by Velour Wears. Explore stitched, unstitched, and girls' Kurti collections in premium lawn, cotton, linen, and khaddar fabrics." />
+  <meta property="og:title" content="Velour Wears - Luxury Pakistani Kurtis" />
+  <meta property="og:description" content="Discover beautifully crafted Pakistani Kurtis by Velour Wears. Explore stitched, unstitched, and girls' Kurti collections in premium lawn, cotton, linen, and khaddar fabrics." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Pure Static CSS (No Build Step Required) -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <div class="site-wrapper">
+
+    <!-- 1. PERMANENTLY STICKY NAVBAR -->
+    <div class="sticky-navbar-wrapper">
+      <!-- Announcement Bar -->
+      <div class="announcement-bar">
+        <span class="gold-badge">NEW SEASON</span>
+        <span class="divider">|</span>
+        <span class="text">Complimentary Nationwide Delivery on Orders Above Rs. 5,000 · Cash on Delivery</span>
+      </div>
+
+      <!-- Main Header -->
+      <header class="max-w-7xl header-container">
+        <!-- Logo -->
+        <a href="#hero" class="brand-logo" aria-label="Velour Wears Home">
+          <span class="brand-name">Velour Wears</span>
+          <span class="brand-sub">Pakistani Kurtis</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#stitched" class="nav-link">Stitched Kurtis</a>
+          <a href="#unstitched" class="nav-link">Unstitched Collection</a>
+          <a href="#girls" class="nav-link">Girls' Kurtis</a>
+          <a href="#featured" class="nav-link">Featured</a>
+          <a href="#about" class="nav-link">Brand Story</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          <button type="button" class="icon-btn open-search-btn" aria-label="Search Kurtis" title="Search Kurtis">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </button>
+
+          <button type="button" class="bag-btn open-cart-btn" aria-label="Shopping Bag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="bag-label">Bag</span>
+            <span class="bag-count">0</span>
+          </button>
+
+          <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Open Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+      </header>
+    </div>
+
+    <!-- 2. MOBILE MENU DRAWER -->
+    <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" aria-hidden="true"></div>
+    <div id="mobileMenuPanel" class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+      <div class="mobile-menu-header">
+        <div>
+          <span style="font-family:var(--font-serif); font-size:1.375rem; font-weight:600; color:#111; display:block; line-height:1;">Velour Wears</span>
+          <span style="font-size:9px; text-transform:uppercase; letter-spacing:0.24em; color:#C6A15B; font-weight:600; display:block; margin-top:2px;">Pakistani Kurtis</span>
+        </div>
+        <button type="button" id="closeMobileMenuBtn" class="icon-btn" aria-label="Close Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-menu-nav">
+        <button type="button" class="mobile-menu-link" data-target="hero"><span>Home</span></button>
+        <button type="button" class="mobile-menu-link" data-target="catalog"><span>Kurtis (All Styles)</span><span style="font-size:10px; color:#C6A15B; font-weight:600;">22 Designs</span></button>
+        <button type="button" class="mobile-menu-link" data-target="stitched"><span>Stitched</span><span style="font-size:10px; color:rgba(17,17,17,0.5);">Ready to Wear</span></button>
+        <button type="button" class="mobile-menu-link" data-target="unstitched"><span>Unstitched</span><span style="font-size:10px; color:rgba(17,17,17,0.5);">Pure Fabrics</span></button>
+        <button type="button" class="mobile-menu-link" data-target="girls"><span>Girls</span><span style="font-size:10px; color:rgba(17,17,17,0.5);">Junior Edit</span></button>
+        <button type="button" class="mobile-menu-link" data-target="featured"><span>New Arrivals</span><span style="font-size:10px; color:#C6A15B; font-weight:600;">Fresh</span></button>
+        <button type="button" class="mobile-menu-link" data-target="catalog"><span>Collections</span></button>
+        <button type="button" class="mobile-menu-link" data-target="about"><span>About</span></button>
+        <button type="button" class="mobile-menu-link" data-target="contact"><span>Contact</span></button>
+      </nav>
+
+      <div class="mobile-menu-footer">
+        <button type="button" id="mobileMenuBagBtn" class="mobile-add-to-bag-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span>ADD TO BAG (0)</span>
+        </button>
+        <div class="mobile-menu-footer-meta">
+          <span>Sizes: <strong>Small</strong> & <strong>Large</strong></span>
+          <span style="color:#C6A15B; font-weight:500;">Cash on Delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN BODY CONTENT -->
+    <main>
+
+      <!-- 3. HERO EDITORIAL CAROUSEL -->
+      <section id="hero" class="hero-section" aria-label="Hero Carousel">
+        <div class="max-w-7xl">
+          <div class="hero-grid">
+            
+            <!-- Left Column: Editorial Copy & CTAs -->
+            <div class="hero-content">
+              <div class="kicker-metadata">
+                <span>Pakistani Haute Couture</span>
+                <span aria-hidden="true" style="color:rgba(17,17,17,0.3);">·</span>
+                <span style="color:rgba(17,17,17,0.7);">Lawn & Cotton Kurtis</span>
+              </div>
+
+              <div class="hero-headline-container">
+                <h1 id="heroHeadline" class="hero-headline">Elegance, Woven for You.</h1>
+              </div>
+
+              <p id="heroSupporting" class="hero-supporting">
+                Discover beautifully crafted Pakistani Kurtis, available in stitched and unstitched collections. Designed with exquisite resham embroidery and pure breathable natural textiles.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#stitched" class="btn-primary">
+                  <span>SHOP STITCHED</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="#unstitched" class="btn-secondary">
+                  <span>EXPLORE UNSTITCHED</span>
+                </a>
+              </div>
+
+              <div class="hero-metrics">
+                <div>
+                  <p class="metric-val">100%</p>
+                  <p class="metric-lbl">Pure Lawn & Cotton</p>
+                </div>
+                <div>
+                  <p class="metric-val">Small & Large</p>
+                  <p class="metric-lbl">Standardized Fits</p>
+                </div>
+                <div>
+                  <p class="metric-val">Artisanal</p>
+                  <p class="metric-lbl">Resham Needlework</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Carousel Image Viewport -->
+            <div class="hero-carousel-container">
+              <div id="heroViewport" class="hero-viewport">
+                
+                <div id="heroTrack" class="hero-track">
+                  <!-- Slide 1 -->
+                  <div class="hero-slide">
+                    <img src="./assets/images/hero_velour_kurti_1790591497831.jpg" alt="Velour Kurti Editorial" style="object-position: center 20%;" />
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="hero-slide">
+                    <img src="./assets/images/hero_editorial_emerald_1790595724167.jpg" alt="Noor Royal Emerald Kurti" style="object-position: center top;" />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="hero-slide">
+                    <img src="./assets/images/hero_editorial_crimson_1790593518456.jpg" alt="Zoya Festive Crimson Kurti" style="object-position: center center;" />
+                  </div>
+                  <!-- Slide 4 -->
+                  <div class="hero-slide">
+                    <img src="./assets/images/hero_editorial_unstitched_1790595759987.jpg" alt="Unstitched Luxury Lawn Collection" style="object-position: center center;" />
+                  </div>
+                  <!-- Slide 5 -->
+                  <div class="hero-slide">
+                    <img src="./assets/images/hero_editorial_sapphire_1790595739895.jpg" alt="Meher Royal Sapphire Kurti" style="object-position: center top;" />
+                  </div>
+                </div>
+
+                <!-- Live Caption Overlay -->
+                <div class="hero-caption">
+                  <div style="min-width:0; padding-right:0.5rem;">
+                    <p id="heroCaptionBadge" style="font-family:var(--font-serif); font-size:13px; font-weight:600; color:#FAF9F6; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">The Maham Champagne Edit</p>
+                    <p id="heroCaptionTagline" style="font-size:10px; color:#C6A15B; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Resham Embroidered Lawn · Ready to Wear</p>
+                  </div>
+                  <span id="heroCaptionPrice" style="font-size:12px; font-family:monospace; color:rgba(255,255,255,0.9); flex-shrink:0;">Rs. 7,450</span>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button type="button" id="heroPrevBtn" class="hero-arrow prev" aria-label="Previous Slide">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button type="button" id="heroNextBtn" class="hero-arrow next" aria-label="Next Slide">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+              </div>
+
+              <!-- Pagination Dots -->
+              <div class="hero-dots">
+                <button type="button" class="hero-dot active" aria-label="Slide 1"></button>
+                <button type="button" class="hero-dot" aria-label="Slide 2"></button>
+                <button type="button" class="hero-dot" aria-label="Slide 3"></button>
+                <button type="button" class="hero-dot" aria-label="Slide 4"></button>
+                <button type="button" class="hero-dot" aria-label="Slide 5"></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. FEATURED KURTIS SECTION -->
+      <section id="featured" class="section-wrapper">
+        <div class="max-w-7xl">
+          <div class="section-header">
+            <div>
+              <span class="section-kicker">Curated Highlights</span>
+              <h2 class="section-title">Featured Kurtis</h2>
+              <p class="section-desc">Handpicked designs from our stitched, unstitched, and girls' collections showcasing signature resham embroidery and premium fabrics.</p>
+            </div>
+            <div class="carousel-nav-controls">
+              <a href="#catalog" class="view-all-link">
+                <span>Browse All 22 Kurtis</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="carousel-arrow-btn" data-scroll-row="featuredCarouselRow" data-dir="prev" aria-label="Previous">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <button type="button" class="carousel-arrow-btn" data-scroll-row="featuredCarouselRow" data-dir="next" aria-label="Next">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div id="featuredCarouselRow" class="carousel-scroll-row"></div>
+        </div>
+      </section>
+
+      <!-- 5. STITCHED KURTIS SECTION -->
+      <section id="stitched" class="section-wrapper bg-tint">
+        <div class="max-w-7xl">
+          <div class="section-header">
+            <div>
+              <span class="section-kicker">Ready to Wear</span>
+              <h2 class="section-title">Stitched Kurtis</h2>
+              <p class="section-desc">Ready-to-wear Pakistani Kurtis designed for effortless everyday elegance. Standardized precision fit in Small and Large.</p>
+              <p class="section-note">Hover on desktop or tap image on mobile to inspect matching Back View</p>
+            </div>
+            <div class="carousel-nav-controls">
+              <a href="#catalog" class="view-all-link">
+                <span>Filter Stitched</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="carousel-arrow-btn" data-scroll-row="stitchedCarouselRow" data-dir="prev" aria-label="Previous">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <button type="button" class="carousel-arrow-btn" data-scroll-row="stitchedCarouselRow" data-dir="next" aria-label="Next">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div id="stitchedCarouselRow" class="carousel-scroll-row"></div>
+        </div>
+      </section>
+
+      <!-- 6. UNSTITCHED COLLECTION SECTION -->
+      <section id="unstitched" class="section-wrapper">
+        <div class="max-w-7xl">
+          <div class="section-header">
+            <div>
+              <span class="section-kicker">Pure Fabric Edits</span>
+              <h2 class="section-title">Unstitched Collection</h2>
+              <p class="section-desc">Premium Pakistani fabrics and beautiful prints, ready to be styled your way. Each cut includes 3.0 meters and resham embroidered neckline patches.</p>
+              <p class="section-note">Pure Egyptian Lawn, Slub Cotton, Summer Linen & Khaddar</p>
+            </div>
+            <div class="carousel-nav-controls">
+              <a href="#catalog" class="view-all-link">
+                <span>Filter Unstitched</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="carousel-arrow-btn" data-scroll-row="unstitchedCarouselRow" data-dir="prev" aria-label="Previous">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <button type="button" class="carousel-arrow-btn" data-scroll-row="unstitchedCarouselRow" data-dir="next" aria-label="Next">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div id="unstitchedCarouselRow" class="carousel-scroll-row"></div>
+        </div>
+      </section>
+
+      <!-- 7. GIRLS' KURTIS SECTION -->
+      <section id="girls" class="section-wrapper bg-tint-light">
+        <div class="max-w-7xl">
+          <div class="section-header">
+            <div>
+              <span class="section-kicker">Junior Elegance</span>
+              <h2 class="section-title">Girls' Kurtis</h2>
+              <p class="section-desc">A separate collection of Pakistani-style Kurtis designed for young girls. Tailored with pure cotton and soft lawn, gentle inner lining, and culturally appropriate festive styling.</p>
+              <p class="section-note">Ages 6 to 12 · Small & Large Sizing</p>
+            </div>
+            <div class="carousel-nav-controls">
+              <a href="#catalog" class="view-all-link">
+                <span>Filter Girls' Kurtis</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <button type="button" class="carousel-arrow-btn" data-scroll-row="girlsCarouselRow" data-dir="prev" aria-label="Previous">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <button type="button" class="carousel-arrow-btn" data-scroll-row="girlsCarouselRow" data-dir="next" aria-label="Next">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div id="girlsCarouselRow" class="carousel-scroll-row"></div>
+        </div>
+      </section>
+
+      <!-- 8. FABRIC GUIDE & CLIENT REVIEWS -->
+      <section class="section-wrapper">
+        <div class="max-w-7xl">
+          <div class="section-header">
+            <div>
+              <span class="section-kicker">Knowledge & Heritage</span>
+              <h2 class="section-title">Fabric Guide & Client Reviews</h2>
+            </div>
+            <div class="fabric-tabs">
+              <button type="button" class="fabric-tab-btn active" data-tab="fabric">Fabrics</button>
+              <button type="button" class="fabric-tab-btn" data-tab="styling">Styling</button>
+              <button type="button" class="fabric-tab-btn" data-tab="reviews">Reviews</button>
+            </div>
+          </div>
+
+          <!-- Fabrics Tab Content -->
+          <div id="tabContentFabric" class="catalog-grid">
+            <div class="trust-card">
+              <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Pure Egyptian Lawn</h3>
+              <p style="font-size:11px; color:#C6A15B; font-weight:600; text-transform:uppercase;">80/80 High-Density Weave</p>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.75); line-height:1.5;">Extremely lightweight, breathable, and silky-smooth against the skin. Ideal for warm weather with superior color-fastness that preserves intricate resham embroidery.</p>
+              <p style="font-size:11px; color:rgba(26,26,26,0.6); border-top:1px solid rgba(17,17,17,0.08); padding-top:0.5rem; margin-top:auto;"><strong>Care:</strong> Cold hand wash with mild detergent. Avoid prolonged direct sunlight.</p>
+            </div>
+
+            <div class="trust-card">
+              <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Mercerized Combed Cotton</h3>
+              <p style="font-size:11px; color:#C6A15B; font-weight:600; text-transform:uppercase;">Structured All-Season Comfort</p>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.75); line-height:1.5;">Combed long-staple cotton treated for lustrous sheen and anti-wrinkle resilience. Crisp drape that holds sharp tailoring and Mandarin collar silhouettes.</p>
+              <p style="font-size:11px; color:rgba(26,26,26,0.6); border-top:1px solid rgba(17,17,17,0.08); padding-top:0.5rem; margin-top:auto;"><strong>Care:</strong> Machine wash delicate. Iron on medium cotton setting.</p>
+            </div>
+
+            <div class="trust-card">
+              <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Handwoven Slub Khaddar</h3>
+              <p style="font-size:11px; color:#C6A15B; font-weight:600; text-transform:uppercase;">Textured Winter Warmth</p>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.75); line-height:1.5;">Richly textured Pakistani khaddar with artisanal horizontal slub yarns. Provides comfortable insulation for autumn and winter festivities.</p>
+              <p style="font-size:11px; color:rgba(26,26,26,0.6); border-top:1px solid rgba(17,17,17,0.08); padding-top:0.5rem; margin-top:auto;"><strong>Care:</strong> Pre-shrink in cold water before stitching. Dry clean recommended.</p>
+            </div>
+
+            <div class="trust-card">
+              <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Summer Blended Linen</h3>
+              <p style="font-size:11px; color:#C6A15B; font-weight:600; text-transform:uppercase;">Natural Breathable Drape</p>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.75); line-height:1.5;">Natural flax fibers blended with cotton for a soft earthy texture that breathes effortlessly. Perfect for fluid relaxed A-line kurtis.</p>
+              <p style="font-size:11px; color:rgba(26,26,26,0.6); border-top:1px solid rgba(17,17,17,0.08); padding-top:0.5rem; margin-top:auto;"><strong>Care:</strong> Steam iron while damp for effortless crease recovery.</p>
+            </div>
+          </div>
+
+          <!-- Styling Tab Content -->
+          <div id="tabContentStyling" class="catalog-grid" style="display:none;">
+            <div class="trust-card">
+              <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Everyday Minimalist Chic</h3>
+              <p style="font-size:11px; color:#C6A15B; font-weight:600;">Pair with: Meher or Hania Lawn Kurti</p>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.75); line-height:1.5;">Pair with clean white cigarette pants, classic Kolhapuri chappals, and minimal pearl studs for effortless office or daytime grace.</p>
+            </div>
+            <div class="trust-card">
+              <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Formal Evening & Dinners</h3>
+              <p style="font-size:11px; color:#C6A15B; font-weight:600;">Pair with: Noor Embroidered or Pareesa Zari Kurti</p>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.75); line-height:1.5;">Style with matching straight-cut raw silk trousers, metallic gold khussa, and a lightweight chiffon dupatta.</p>
+            </div>
+            <div class="trust-card">
+              <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Festive & Dawat Edit</h3>
+              <p style="font-size:11px; color:#C6A15B; font-weight:600;">Pair with: Maham Champagne or Zoya Crimson Kurti</p>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.75); line-height:1.5;">Complement with gold jhumkas, a classic clutch, and sleek pulled-back hair to accentuate the intricate front and back neckline embroidery.</p>
+            </div>
+          </div>
+
+          <!-- Reviews Tab Content -->
+          <div id="tabContentReviews" class="catalog-grid" style="display:none;">
+            <div class="trust-card">
+              <div style="color:#C6A15B; display:flex; gap:2px; font-size:14px;">★★★★★</div>
+              <h3 style="font-family:var(--font-serif); font-size:1.125rem; font-weight:600; color:#111;">Amina Tariq · Lahore</h3>
+              <p style="font-size:11px; color:rgba(26,26,26,0.5);">Verified Buyer · Small Fit</p>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.8); line-height:1.5;">"The Noor Embroidered Kurti exceeded my expectations. The lawn fabric is so breathable and the back embroidery detail is truly identical to the front. The Small size was a tailored dream."</p>
+            </div>
+            <div class="trust-card">
+              <div style="color:#C6A15B; display:flex; gap:2px; font-size:14px;">★★★★★</div>
+              <h3 style="font-family:var(--font-serif); font-size:1.125rem; font-weight:600; color:#111;">Zainab Bilal · Karachi</h3>
+              <p style="font-size:11px; color:rgba(26,26,26,0.5);">Verified Buyer · Large Fit</p>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.8); line-height:1.5;">"Received my order in Karachi in 3 days. Beautiful packaging and zero color bleed after washing. The Large size has very comfortable chest and shoulder dimensions."</p>
+            </div>
+            <div class="trust-card">
+              <div style="color:#C6A15B; display:flex; gap:2px; font-size:14px;">★★★★★</div>
+              <h3 style="font-family:var(--font-serif); font-size:1.125rem; font-weight:600; color:#111;">Hira Mansoor · Islamabad</h3>
+              <p style="font-size:11px; color:rgba(26,26,26,0.5);">Verified Buyer · Girls Kurti</p>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.8); line-height:1.5;">"Ordered the Mini Noor Kurti for my 8-year-old daughter. The inner lining is so soft and comfortable, no scratchy embroidery at all. Highly recommend Velour Wears!"</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 9. FULL DIRECTORY / FILTERABLE CATALOG -->
+      <section id="catalog" class="section-wrapper" style="border-top:1px solid var(--color-border);">
+        <div class="max-w-7xl">
+          <div style="margin-bottom:1.5rem;">
+            <span class="section-kicker">Full Store Directory</span>
+            <h2 class="section-title">Browse All Velour Wears Kurtis</h2>
+            <p class="section-desc">Filter by category, fabric material, and size to find your ideal Pakistani Kurti.</p>
+          </div>
+
+          <!-- Interactive Filter Bar -->
+          <div class="filter-bar-container">
+            <div class="filter-group">
+              <button type="button" class="filter-btn active" data-filter-category="all">All (22)</button>
+              <button type="button" class="filter-btn" data-filter-category="stitched">Stitched (8)</button>
+              <button type="button" class="filter-btn" data-filter-category="unstitched">Unstitched (8)</button>
+              <button type="button" class="filter-btn" data-filter-category="girls">Girls' Kurtis (6)</button>
+            </div>
+
+            <div class="filter-group">
+              <select id="filterFabric" class="filter-select" aria-label="Filter by fabric">
+                <option value="All Fabrics">All Fabrics</option>
+                <option value="Lawn">Pure Lawn</option>
+                <option value="Cotton">Combed Cotton</option>
+                <option value="Linen">Summer Linen</option>
+                <option value="Khaddar">Woven Khaddar</option>
+                <option value="Cambric">Fine Cambric</option>
+              </select>
+
+              <select id="filterSize" class="filter-select" aria-label="Filter by size">
+                <option value="all">All Sizes</option>
+                <option value="Small">Small Fit</option>
+                <option value="Large">Large Fit</option>
+              </select>
+
+              <select id="filterSort" class="filter-select" aria-label="Sort products">
+                <option value="featured">Sort: Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name">Alphabetical (A-Z)</option>
+              </select>
+
+              <button type="button" class="open-size-guide-btn" style="font-size:11px; color:#C6A15B; font-weight:600; text-decoration:underline;">
+                Size Chart
+              </button>
+            </div>
+          </div>
+
+          <!-- Filtered Product Grid -->
+          <div id="catalogGrid" class="catalog-grid"></div>
+        </div>
+      </section>
+
+      <!-- 10. BRAND TRUST / CRAFT PHILOSOPHY -->
+      <section id="about" class="brand-trust-section">
+        <div class="max-w-7xl">
+          <div style="text-align:center; max-width:42rem; margin:0 auto;">
+            <p class="section-kicker">Our Craft Philosophy</p>
+            <h2 class="section-title">Designed for Pakistani Style</h2>
+            <p class="section-desc" style="margin:0 auto;">Velour Wears focuses exclusively on authentic Pakistani Kurti designs, sourcing pure breathable lawn, linen, and cotton fabrics, paired with intricate resham threadwork tailored to contemporary silhouettes.</p>
+          </div>
+
+          <div class="brand-trust-grid">
+            <div class="trust-card">
+              <div class="trust-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>
+              </div>
+              <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Artisanal Needlework</h3>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.7); line-height:1.5;">Every Kurti features meticulously executed resham, chikan, or gold tilla needlework inspired by traditional Pakistani craft, finished with clean neckline trims and tailored side vents.</p>
+            </div>
+
+            <div class="trust-card">
+              <div class="trust-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+              </div>
+              <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Pure Breathable Textiles</h3>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.7); line-height:1.5;">We choose 80/80 luxury lawn, mercerized combed cotton, slub khaddar, and textured summer linen. Tested for drape, color fastness, and effortless everyday comfort across Pakistani climates.</p>
+            </div>
+
+            <div class="trust-card">
+              <div class="trust-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Curated Small & Large Sizing</h3>
+              <p style="font-size:0.8125rem; color:rgba(26,26,26,0.7); line-height:1.5;">To eliminate size ambiguity and ensure flattering silhouettes, our collections are precision-tailored into standardized Small and Large profiles with verified chest, shoulder, and length proportions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 11. FOOTER -->
+    <footer id="contact" class="site-footer">
+      <div class="max-w-7xl">
+        <div class="footer-grid">
+          
+          <div class="footer-col-main">
+            <span style="font-family:var(--font-serif); font-size:1.75rem; font-weight:600; color:#FAF9F6; display:block;">Velour Wears</span>
+            <p style="font-size:0.8125rem; color:rgba(255,255,255,0.7); max-width:24rem; line-height:1.6;">
+              A premier Pakistani fashion brand dedicated strictly to the art of the Kurti. Offering luxury stitched ready-to-wear, unstitched fabric edits, and refined girls' Kurtis crafted from pure lawn, linen, and cotton.
+            </p>
+            <div style="font-size:12px; color:#C6A15B; display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.5rem;">
+              <span>Nationwide Delivery</span>
+              <span style="color:rgba(255,255,255,0.3);">·</span>
+              <span>Cash on Delivery</span>
+              <span style="color:rgba(255,255,255,0.3);">·</span>
+              <span>Sizes: Small & Large</span>
+            </div>
+          </div>
+
+          <div class="footer-col-nav">
+            <h4 class="footer-heading">Collections</h4>
+            <ul class="footer-links-list">
+              <li><a href="#stitched">Stitched Kurtis</a></li>
+              <li><a href="#unstitched">Unstitched Collection</a></li>
+              <li><a href="#girls">Girls' Kurtis</a></li>
+              <li><a href="#featured">Featured Kurtis</a></li>
+              <li><button type="button" class="open-size-guide-btn" style="color:#C6A15B;">Size Guide (Small & Large)</button></li>
+            </ul>
+          </div>
+
+          <div class="footer-col-contact">
+            <h4 class="footer-heading">Customer Care & Inquiries</h4>
+            <div style="display:flex; flex-direction:column; gap:0.625rem; font-size:12px; color:rgba(255,255,255,0.8);">
+              <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366" stroke="#25D366"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                <span>+92 300 1234567 (WhatsApp Orders)</span>
+              </a>
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>care@velourwears.pk</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Gulberg III, Lahore, Pakistan</span>
+              </div>
+              <div style="font-size:11px; color:rgba(255,255,255,0.5); padding-top:0.25rem;">
+                Support hours: Monday to Saturday · 10:00 AM – 8:00 PM PKT
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Velour Wears. All rights reserved. Authentic Pakistani Kurtis.</p>
+          <p>Cash on Delivery Available Across Pakistan</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 12. FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/923001234567?text=Hello%20Velour%20Wears,%20I%20am%20interested%20in%20your%20Pakistani%20Kurti%20collection." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp" title="WhatsApp Support">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <span>WhatsApp Support</span>
+    </a>
+
+  </div>
+
+  <!-- =========================================================================
+       MODALS & DRAWERS
+       ========================================================================= -->
+
+  <!-- Quick View Modal -->
+  <div id="quickViewModal" class="modal-backdrop">
+    <div class="modal-dialog split">
+      <button type="button" id="closeQuickViewBtn" class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+
+      <div style="flex:1; background:#F5F0E8; position:relative; min-height:280px; overflow:hidden;">
+        <img id="qvImg" src="" alt="Product View" style="width:100%; height:100%; object-fit:cover; object-position:center top;" />
+        <button type="button" id="qvFlipBtn" style="position:absolute; bottom:0.75rem; left:50%; transform:translateX(-50%); background:rgba(17,17,17,0.8); color:#fff; font-size:11px; padding:4px 12px; border-radius:9999px; display:flex; align-items:center; gap:6px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+          <span>Flip Front / Back View</span>
+        </button>
+      </div>
+
+      <div style="flex:1; padding:1.5rem; display:flex; flex-direction:column; overflow-y:auto; max-height:80dvh;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+          <span id="qvCategory" style="font-size:10px; color:#C6A15B; font-weight:700; letter-spacing:0.1em;">STITCHED KURTI</span>
+          <span id="qvBadge" style="font-size:10px; background:#111; color:#FAF9F6; padding:2px 6px; border-radius:4px; font-weight:600;">Bestseller</span>
+        </div>
+
+        <h3 id="qvName" style="font-family:var(--font-serif); font-size:1.625rem; font-weight:600; color:#111; margin-bottom:6px;">Kurti Name</h3>
+
+        <div style="display:flex; align-items:baseline; gap:8px; margin-bottom:12px;">
+          <span id="qvPrice" style="font-size:1.25rem; font-weight:700; color:#111;">Rs. 0</span>
+          <span id="qvOrigPrice" style="font-size:0.875rem; color:rgba(26,26,26,0.5); text-decoration:line-through;"></span>
+        </div>
+
+        <p id="qvDesc" style="font-size:0.8125rem; color:rgba(26,26,26,0.8); line-height:1.5; margin-bottom:14px;"></p>
+
+        <div style="font-size:12px; color:#111; margin-bottom:14px; display:flex; flex-direction:column; gap:4px;">
+          <div>Fabric: <strong id="qvFabric"></strong></div>
+          <div>Color Tone: <strong id="qvColor"></strong></div>
+          <div>Care: <span id="qvCare" style="color:rgba(26,26,26,0.7);"></span></div>
+        </div>
+
+        <!-- Size Selection -->
+        <div style="margin-bottom:16px;">
+          <div style="display:flex; justify-content:space-between; font-size:11px; font-weight:600; text-transform:uppercase; margin-bottom:6px;">
+            <span>Select Tailored Fit:</span>
+            <button type="button" class="open-size-guide-btn" style="color:#C6A15B; text-decoration:underline;">View Measurements</button>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button type="button" class="size-pill qv-size-pill active" data-size="Small" style="padding:6px 0;">Small (Chest 38")</button>
+            <button type="button" class="size-pill qv-size-pill" data-size="Large" style="padding:6px 0;">Large (Chest 44")</button>
+          </div>
+        </div>
+
+        <!-- Quantity & Add to Cart -->
+        <div style="display:flex; gap:10px; margin-top:auto; padding-top:12px;">
+          <div style="display:flex; align-items:center; border:1px solid rgba(17,17,17,0.2); border-radius:6px;">
+            <button type="button" id="qvQtyDec" style="padding:8px 12px; font-weight:700;">-</button>
+            <span id="qvQty" style="font-size:13px; font-weight:600; padding:0 8px;">1</span>
+            <button type="button" id="qvQtyInc" style="padding:8px 12px; font-weight:700;">+</button>
+          </div>
+          <button type="button" id="qvAddToCartBtn" class="btn-primary" style="flex:1;">
+            <span>Add to Bag</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div id="cartDrawerBackdrop" class="modal-backdrop" style="justify-content:flex-end; padding:0;" aria-hidden="true"></div>
+  <div id="cartDrawerPanel" class="cart-drawer-panel" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+    <!-- Header -->
+    <div style="padding:1.25rem 1.5rem; border-bottom:1px solid rgba(17,17,17,0.1); display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <h2 style="font-family:var(--font-serif); font-size:1.375rem; font-weight:600; color:#111;">Shopping Bag</h2>
+        <span class="bag-count" style="font-size:11px;">0</span>
+      </div>
+      <button type="button" class="close-cart-btn icon-btn" aria-label="Close Bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Free Delivery Progress -->
+    <div style="background:#F5F0E8; padding:0.75rem 1.5rem; border-bottom:1px solid rgba(17,17,17,0.06); font-size:12px;">
+      <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+        <span id="shippingProgressMsg">Add Rs. 5,000 for Free Delivery</span>
+        <span id="shippingProgressPercent" style="color:#C6A15B; font-weight:700;">0%</span>
+      </div>
+      <div style="width:100%; height:6px; background:#FAF9F6; border-radius:9999px; overflow:hidden;">
+        <div id="shippingProgressBar" style="width:0%; height:100%; background:#C6A15B; transition:width 0.3s ease;"></div>
+      </div>
+    </div>
+
+    <!-- Item List -->
+    <div id="cartDrawerList" style="flex:1; overflow-y:auto; padding:1.25rem 1.5rem;"></div>
+
+    <!-- Empty State -->
+    <div id="cartDrawerEmpty" style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:2rem;">
+      <div style="width:4rem; height:4rem; border-radius:9999px; background:#F5F0E8; color:#C6A15B; display:flex; align-items:center; justify-content:center; margin-bottom:1rem;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </div>
+      <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111;">Your bag is empty</h3>
+      <p style="font-size:0.8125rem; color:rgba(26,26,26,0.7); max-width:18rem; margin:0.25rem 0 1rem 0;">Explore our stitched, unstitched, and girls' Pakistani Kurti collections.</p>
+      <button type="button" class="close-cart-btn btn-primary">Start Browsing</button>
+    </div>
+
+    <!-- Drawer Footer -->
+    <div id="cartDrawerFooter" style="padding:1.25rem 1.5rem; border-top:1px solid rgba(17,17,17,0.1); background:#FAF9F6; display:none;">
+      <div style="display:flex; justify-content:space-between; font-size:13px; color:rgba(26,26,26,0.7); margin-bottom:4px;">
+        <span>Subtotal</span>
+        <span id="cartDrawerSubtotal" style="font-weight:600; color:#111;">Rs. 0</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; font-size:13px; color:rgba(26,26,26,0.7); margin-bottom:8px;">
+        <span>Delivery Across Pakistan</span>
+        <span id="cartDrawerShipping" style="font-weight:600; color:#111;">FREE</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; font-size:16px; font-weight:700; color:#111; padding-top:8px; border-top:1px solid rgba(17,17,17,0.08); margin-bottom:14px;">
+        <span>Estimated Total</span>
+        <span id="cartDrawerTotal">Rs. 0</span>
+      </div>
+
+      <button type="button" id="proceedToCheckoutBtn" class="btn-primary" style="width:100%;">
+        <span>PROCEED TO CHECKOUT</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Size Guide Modal -->
+  <div id="sizeGuideModal" class="modal-backdrop">
+    <div class="modal-dialog" style="max-width:40rem; padding:1.5rem 2rem;">
+      <div style="display:flex; align-items:center; justify-content:space-between; padding-bottom:1rem; border-bottom:1px solid rgba(17,17,17,0.1);">
+        <div>
+          <h2 style="font-family:var(--font-serif); font-size:1.5rem; font-weight:600; color:#111;">Velour Wears Size Guide</h2>
+          <p style="font-size:12px; color:rgba(26,26,26,0.7);">Precision Tailored Fits — Exclusively in <strong>Small</strong> & <strong>Large</strong></p>
+        </div>
+        <button type="button" class="close-size-guide-btn icon-btn" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <div style="padding:1.25rem 0; overflow-x:auto;">
+        <h3 style="font-family:var(--font-serif); font-size:1.125rem; font-weight:600; color:#111; margin-bottom:8px;">Women's Stitched Kurti Chart (Inches)</h3>
+        <table style="width:100%; border-collapse:collapse; font-size:12px; text-align:left; border:1px solid rgba(17,17,17,0.1); border-radius:6px; overflow:hidden;">
+          <thead style="background:#F5F0E8; color:#111; text-transform:uppercase;">
+            <tr>
+              <th style="padding:8px 12px;">Size</th>
+              <th style="padding:8px 12px;">Chest (Bust)</th>
+              <th style="padding:8px 12px;">Length</th>
+              <th style="padding:8px 12px;">Shoulder</th>
+              <th style="padding:8px 12px;">Hip</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-top:1px solid rgba(17,17,17,0.08);">
+              <td style="padding:8px 12px; font-weight:700;">Small</td>
+              <td style="padding:8px 12px;">38" (19" flat)</td>
+              <td style="padding:8px 12px;">38"</td>
+              <td style="padding:8px 12px;">14.5"</td>
+              <td style="padding:8px 12px;">42"</td>
+            </tr>
+            <tr style="border-top:1px solid rgba(17,17,17,0.08);">
+              <td style="padding:8px 12px; font-weight:700;">Large</td>
+              <td style="padding:8px 12px;">44" (22" flat)</td>
+              <td style="padding:8px 12px;">40"</td>
+              <td style="padding:8px 12px;">16.0"</td>
+              <td style="padding:8px 12px;">48"</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="font-family:var(--font-serif); font-size:1.125rem; font-weight:600; color:#111; margin:16px 0 8px 0;">Girls' Kurti Chart (Inches)</h3>
+        <table style="width:100%; border-collapse:collapse; font-size:12px; text-align:left; border:1px solid rgba(17,17,17,0.1); border-radius:6px; overflow:hidden;">
+          <thead style="background:#F5F0E8; color:#111; text-transform:uppercase;">
+            <tr>
+              <th style="padding:8px 12px;">Size</th>
+              <th style="padding:8px 12px;">Approx Age</th>
+              <th style="padding:8px 12px;">Chest</th>
+              <th style="padding:8px 12px;">Length</th>
+              <th style="padding:8px 12px;">Shoulder</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-top:1px solid rgba(17,17,17,0.08);">
+              <td style="padding:8px 12px; font-weight:700;">Small</td>
+              <td style="padding:8px 12px;">6 - 8 Years</td>
+              <td style="padding:8px 12px;">30"</td>
+              <td style="padding:8px 12px;">28"</td>
+              <td style="padding:8px 12px;">12.0"</td>
+            </tr>
+            <tr style="border-top:1px solid rgba(17,17,17,0.08);">
+              <td style="padding:8px 12px; font-weight:700;">Large</td>
+              <td style="padding:8px 12px;">9 - 12 Years</td>
+              <td style="padding:8px 12px;">34"</td>
+              <td style="padding:8px 12px;">32"</td>
+              <td style="padding:8px 12px;">13.5"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background:#F5F0E8; padding:0.75rem 1rem; border-radius:8px; font-size:11px; color:rgba(26,26,26,0.8); line-height:1.4;">
+        <strong>How to measure:</strong> Lay your favorite well-fitting Pakistani kurti flat. Measure 1 inch below the armhole across the chest, and double it. Select <strong>Large</strong> if chest measurement is above 40 inches.
+      </div>
+      
+      <div style="text-align:center; padding-top:1rem;">
+        <button type="button" class="close-size-guide-btn btn-primary" style="margin:0 auto;">I Understand My Size</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div id="searchModal" class="modal-backdrop" style="align-items:flex-start; padding-top:4rem;">
+    <div class="modal-dialog" style="max-width:42rem; border-radius:1rem;">
+      <div style="padding:1rem 1.25rem; border-bottom:1px solid rgba(17,17,17,0.1); display:flex; align-items:center; gap:0.75rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="searchInput" placeholder="Search Pakistani Kurtis (e.g. Noor, Lawn, Cotton, Embroidered)..." style="width:100%; border:none; outline:none; background:transparent; font-size:0.9375rem; color:#111;" />
+        <button type="button" id="searchClearBtn" style="font-size:12px; color:rgba(17,17,17,0.5);">Clear</button>
+        <button type="button" class="close-search-btn" style="font-size:12px; text-transform:uppercase; font-weight:600; color:#111;">Esc</button>
+      </div>
+
+      <div style="background:#F5F0E8; padding:0.5rem 1.25rem; border-bottom:1px solid rgba(17,17,17,0.06); display:flex; align-items:center; gap:0.5rem; overflow-x:auto; font-size:11px;">
+        <span style="color:rgba(17,17,17,0.6); flex-shrink:0;">Quick:</span>
+        <button type="button" class="search-pill-tag" data-tag="Noor Kurti" style="padding:2px 8px; background:#FAF9F6; border-radius:4px;">Noor Kurti</button>
+        <button type="button" class="search-pill-tag" data-tag="Pure Lawn" style="padding:2px 8px; background:#FAF9F6; border-radius:4px;">Pure Lawn</button>
+        <button type="button" class="search-pill-tag" data-tag="Embroidered" style="padding:2px 8px; background:#FAF9F6; border-radius:4px;">Embroidered</button>
+        <button type="button" class="search-pill-tag" data-tag="Unstitched" style="padding:2px 8px; background:#FAF9F6; border-radius:4px;">Unstitched</button>
+        <button type="button" class="search-pill-tag" data-tag="Girls Kurti" style="padding:2px 8px; background:#FAF9F6; border-radius:4px;">Girls Kurti</button>
+      </div>
+
+      <div id="searchResults" style="max-height:60vh; overflow-y:auto; padding:1rem 1.25rem;">
+        <p style="font-size:12px; color:rgba(26,26,26,0.6); text-align:center; padding:1.5rem 0;">Type above to search across stitched, unstitched, and girls' Kurtis.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div id="checkoutModal" class="modal-backdrop">
+    <div class="modal-dialog" style="max-width:44rem; max-height:90dvh; overflow-y:auto;">
+      <div style="padding:1rem 1.5rem; background:#F5F0E8; border-bottom:1px solid rgba(17,17,17,0.1); display:flex; align-items:center; justify-content:space-between;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-family:var(--font-serif); font-size:1.375rem; font-weight:600; color:#111;">Velour Wears</span>
+          <span style="color:rgba(17,17,17,0.3);">|</span>
+          <span style="font-size:11px; text-transform:uppercase; color:#C6A15B; font-weight:600;">Order Checkout</span>
+        </div>
+        <button type="button" id="closeCheckoutBtn" class="icon-btn" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <div style="padding:1.5rem;">
+        <!-- Form View -->
+        <form id="checkoutForm" style="display:block;">
+          <h3 style="font-family:var(--font-serif); font-size:1.25rem; font-weight:600; color:#111; margin-bottom:12px;">Shipping Address & Payment</h3>
+          
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+            <div>
+              <label style="display:block; font-size:11px; font-weight:600; margin-bottom:4px; text-transform:uppercase;">Full Name *</label>
+              <input type="text" id="coName" required placeholder="e.g. Fatima Zahra" style="width:100%; padding:8px 10px; border:1px solid rgba(17,17,17,0.2); border-radius:6px; font-size:13px;" />
+            </div>
+            <div>
+              <label style="display:block; font-size:11px; font-weight:600; margin-bottom:4px; text-transform:uppercase;">Phone Number *</label>
+              <input type="tel" id="coPhone" required placeholder="03001234567" style="width:100%; padding:8px 10px; border:1px solid rgba(17,17,17,0.2); border-radius:6px; font-size:13px;" />
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 2fr; gap:12px; margin-bottom:12px;">
+            <div>
+              <label style="display:block; font-size:11px; font-weight:600; margin-bottom:4px; text-transform:uppercase;">City</label>
+              <select id="coCity" style="width:100%; padding:8px 10px; border:1px solid rgba(17,17,17,0.2); border-radius:6px; font-size:13px;">
+                <option value="Lahore">Lahore</option>
+                <option value="Karachi">Karachi</option>
+                <option value="Islamabad">Islamabad</option>
+                <option value="Rawalpindi">Rawalpindi</option>
+                <option value="Faisalabad">Faisalabad</option>
+                <option value="Peshawar">Peshawar</option>
+                <option value="Multan">Multan</option>
+                <option value="Other">Other Pakistani Cities</option>
+              </select>
+            </div>
+            <div>
+              <label style="display:block; font-size:11px; font-weight:600; margin-bottom:4px; text-transform:uppercase;">Street Address *</label>
+              <input type="text" id="coAddress" required placeholder="House #, Street, Phase/Block" style="width:100%; padding:8px 10px; border:1px solid rgba(17,17,17,0.2); border-radius:6px; font-size:13px;" />
+            </div>
+          </div>
+
+          <div style="background:#F5F0E8; padding:12px; border-radius:8px; margin:16px 0;">
+            <p style="font-size:12px; font-weight:600; color:#111; margin-bottom:4px;">Payment Method:</p>
+            <div style="display:flex; align-items:center; gap:8px; font-size:13px;">
+              <input type="radio" id="pmCod" name="payment" checked />
+              <label for="pmCod"><strong>Cash on Delivery (COD)</strong> — Pay cash when package arrives at your doorstep</label>
+            </div>
+          </div>
+
+          <div style="border-top:1px solid rgba(17,17,17,0.1); padding-top:12px; margin-bottom:16px; font-size:13px; display:flex; flex-direction:column; gap:4px;">
+            <div style="display:flex; justify-content:space-between;">
+              <span>Subtotal:</span>
+              <span id="checkoutSubtotal">Rs. 0</span>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <span>Delivery Fee:</span>
+              <span id="checkoutShipping">FREE</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:16px; font-weight:700; color:#111; border-top:1px solid rgba(17,17,17,0.08); padding-top:6px; margin-top:4px;">
+              <span>Grand Total:</span>
+              <span id="checkoutTotal">Rs. 0</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%;">
+            <span>CONFIRM & PLACE ORDER</span>
+          </button>
+        </form>
+
+        <!-- Order Confirmed State -->
+        <div id="orderConfirmedView" style="display:none; text-align:center; padding:1.5rem 0;">
+          <div style="width:4rem; height:4rem; border-radius:9999px; background:#EBF5EE; color:#2E6B47; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem auto;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <h3 style="font-family:var(--font-serif); font-size:1.75rem; font-weight:600; color:#111; margin-bottom:4px;">Order Placed Successfully!</h3>
+          <p style="font-size:13px; color:rgba(26,26,26,0.7); margin-bottom:1rem;">Your order ID is: <strong id="confirmedOrderId" style="color:#111;"></strong></p>
+          <p style="font-size:12px; color:rgba(26,26,26,0.7); max-width:24rem; margin:0 auto 1.5rem auto; line-height:1.5;">Thank you for shopping with Velour Wears. Our team will verify your address via call/SMS before dispatching your luxury Pakistani Kurti.</p>
+          <button type="button" id="closeConfirmedBtn" class="btn-primary" style="margin:0 auto;">Continue Shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Pure Vanilla JavaScript (No React / No Vite / No Bundle Required) -->
+  <script src="./script.js"></script>
+</body>
+</html>
